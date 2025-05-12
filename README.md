@@ -1,9 +1,9 @@
-Atualizar códigos no terminal:
+Atualizar códigos no terminal em ordem:
 
-git status
+1° git status
 
-git add .
+2° git add .
 
-git commit -m "XXXXX"
+3° git commit -m "XXXXX"
 
-git push
+4° git push
