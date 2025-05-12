@@ -248,7 +248,6 @@ if (!isset($_SESSION['nome_usuario']) && !isset($_GET['origem'])) {
         <p>© Pedro e Antony, 2025. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="#" class="help-button" id="fleeingQuestion">?</a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -271,50 +270,6 @@ if (!isset($_SESSION['nome_usuario']) && !isset($_GET['origem'])) {
                         content.style.display = 'block';
                     }
                 });
-            });
-            
-            // Easter egg: ponto de interrogação que foge do mouse
-            const questionMark = document.getElementById('fleeingQuestion');
-            
-            document.addEventListener('mousemove', function(event) {
-                const mouseX = event.clientX;
-                const mouseY = event.clientY;
-                
-                const markRect = questionMark.getBoundingClientRect();
-                const markX = markRect.left + markRect.width / 2;
-                const markY = markRect.top + markRect.height / 2;
-                
-                // Calcular a distância entre o mouse e o ponto de interrogação
-                const distance = Math.sqrt(Math.pow(mouseX - markX, 2) + Math.pow(mouseY - markY, 2));
-                
-                // Se o mouse estiver próximo, mova o ponto de interrogação para longe
-                if (distance < 100) {
-                    // Calcular a direção oposta
-                    const directionX = markX - mouseX;
-                    const directionY = markY - mouseY;
-                    
-                    // Normalizar a direção
-                    const length = Math.sqrt(directionX * directionX + directionY * directionY);
-                    const normalizedX = directionX / length;
-                    const normalizedY = directionY / length;
-                    
-                    // Mover o ponto de interrogação
-                    const moveDistance = Math.max(0, (100 - distance) / 2);
-                    const newBottom = parseInt(window.getComputedStyle(questionMark).bottom) + normalizedY * moveDistance;
-                    const newRight = parseInt(window.getComputedStyle(questionMark).right) + normalizedX * moveDistance;
-                    
-                    // Garantir que o ponto de interrogação fique na tela
-                    const windowHeight = window.innerHeight;
-                    const windowWidth = window.innerWidth;
-                    
-                    if (newBottom > 20 && newBottom < windowHeight - 60) {
-                        questionMark.style.bottom = newBottom + 'px';
-                    }
-                    
-                    if (newRight > 20 && newRight < windowWidth - 60) {
-                        questionMark.style.right = newRight + 'px';
-                    }
-                }
             });
         });
     </script>
