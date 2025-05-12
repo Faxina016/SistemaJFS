@@ -1,0 +1,62 @@
+/* Estilos para a janela modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 0, 255, 0.8); /* Fundo escuro com transparência */
+}
+
+/* Estilos da caixa de conteúdo do modal */
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #1a31ff;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0px 0px 10px #fff;
+    border-radius: 10px;
+}
+
+/* Estilos do botão para fechar o modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Estilos da mensagem de boas-vindas */
+.welcome-message {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.welcome-theme {
+    color: #4CAF50; /* Cor verde */
+    font-size: 32px;
+    text-shadow: 2px 2px 8px #000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animação suave para a mensagem */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

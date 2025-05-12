@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="Bemvindocss.css">
+</head>
+<body>
+    <!-- Janela Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p class="welcome-message">Seja Bem Vindo(a) ao Sistema do E.E José Florentino de Souza</p>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            var modal = document.getElementById("welcomeModal");
+            var closeBtn = document.getElementById("closeModal");
+
+            modal.style.display = "block";
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+                window.location.href = '../home.php';
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    window.location.href = '../home.php';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
