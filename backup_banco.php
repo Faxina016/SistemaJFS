@@ -1,4 +1,4 @@
-<?php
+j<?php
 // === CONFIGURAÇÕES ===
 $host = 'localhost';
 $user = 'root';
